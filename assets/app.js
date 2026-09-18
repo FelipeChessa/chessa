@@ -56,4 +56,39 @@
     const link = document.querySelector('[data-contact-wa]');
     topic.addEventListener('change', () => { link.href = `https://wa.me/5511992876042?text=${encodeURIComponent(`${link.dataset.message} ${topic.value}.`)}`; });
   }
+
+  // Video pulse effect - plays forward and backward for breathing/pulse sensation
+  const heroVideo = document.querySelector('.hero-art');
+  if (heroVideo && heroVideo.tagName === 'VIDEO') {
+    let direction = 1;
+    const speed = 0.5;
+    
+    heroVideo.playbackRate = speed;
+    
+    heroVideo.addEventListener('ended', () => {
+      direction = -1;
+      heroVideo.currentTime = heroVideo.duration;
+      heroVideo.play();
+    });
+
+    heroVideo.addEventListener('timeupdate', () => {
+      if (direction === -1 && heroVideo.currentTime <= 0) {
+        direction = 1;
+        heroVideo.currentTime = 0;
+        heroVideo.play();
+      }
+    });
+
+    // Smooth reverse playback simulation
+    let lastTime = 0;
+    const reversePlay = (currentTime) => {
+      if (direction === -1 && !heroVideo.paused) {
+        const delta = ((currentTime - lastTime) / 1000) * speed;
+        heroVideo.currentTime = Math.max(0, heroVideo.currentTime - delta);
+      }
+      lastTime = currentTime;
+      requestAnimationFrame(reversePlay);
+    };
+    requestAnimationFrame(reversePlay);
+  }
 })();

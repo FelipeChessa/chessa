@@ -9,6 +9,7 @@ const project = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(project, 'dist');
 await mkdir(join(out, 'assets', 'fonts'), { recursive: true });
 await mkdir(join(out, 'assets', 'licenses'), { recursive: true });
+await mkdir(join(out, 'videos'), { recursive: true });
 for (const file of ['styles.css','app.js','favicon.svg']) {
   await cp(join(project, 'assets', file), join(out, 'assets', file));
 }
@@ -23,6 +24,7 @@ await cp(join(project,'assets','logos'),join(out,'assets','logos'),{recursive:tr
 await sharp(join(project,'assets','capa-pt.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','capa-pt.webp'));
 await sharp(join(project,'assets','capa-en.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','capa-en.webp'));
 await sharp(join(project,'assets','capa-es.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','capa-es.webp'));
+await cp(join(project,'videos','capa_corte.mp4'),join(out,'videos','capa_corte.mp4'));
 let count = 0;
 for (const lang of locales) {
   const dir = join(out,lang === 'pt' ? '' : lang);
