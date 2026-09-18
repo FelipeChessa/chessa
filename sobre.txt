@@ -1,0 +1,99 @@
+PAPEL
+Você é um desenvolvedor front-end sênior trabalhando no site pessoal/comercial de Felipe Chessa (marca "Chessa — Negócios e Tecnologia"), publicado em https://chessa-xi.vercel.app/. Sua tarefa é reescrever e ampliar o conteúdo da página "Sobre", mantendo o design e o código existentes.
+
+OBJETIVO
+A página atual (/sobre/) está fraca: lista as empresas onde trabalhei (Indra Minsait, Avanade, Bizapp) sem dizer o que eu fiz, onde, com que porte de cliente nem até onde cheguei. Quero detalhar minha trajetória profissional em CRM, Customer Service e transformação digital e ligar essa experiência corporativa ao que a Chessa vende hoje (sites, automação, CRM para negócios menores).
+
+CONTEXTO DO SITE
+- Site multilíngue, com três versões da página: PT /sobre/, EN /en/about/, ES /es/sobre-mi/. As três precisam ser atualizadas.
+- Páginas irmãs: /solucoes/, /projetos/, /contato/. Não altere nenhuma delas.
+- Tom de voz atual: primeira pessoa, direto, acolhedor, sem jargão excessivo. Preserve.
+- A página atual tem estas seções, nesta ordem: (1) abertura com título "Felipe Chessa. Negócios, pessoas e tecnologia." e foto; (2) "Trajetória profissional" com as três empresas e as competências (Dynamics 365 e Power Platform; Customer Service e omnichannel; Processos e transformação digital; Customer Success e governança); (3) credenciais Microsoft (MB-230, MB-910, PL-900); (4) "O processo vem antes da ferramenta" com 4 passos (Entender, Desenhar, Construir, Colocar em prática); (5) CTA final com botão de WhatsApp.
+
+PRIMEIRO PASSO (antes de editar)
+1. Explore o projeto e descubra a stack (framework, como as páginas e as traduções são organizadas, onde ficam os estilos e os componentes).
+2. Identifique como as três versões de idioma são geradas (arquivos separados, dicionário de i18n, etc.) e siga exatamente o mesmo padrão.
+3. Reutilize os componentes, classes e tokens de design já existentes (cartões, títulos de seção, listas, espaçamentos). Não introduza novas bibliotecas nem um novo estilo visual.
+
+REGRAS
+- Não invente fatos. Use apenas o conteúdo fornecido abaixo. Se algum campo entre [colchetes] não tiver sido preenchido, omita essa linha ou bloco por completo.
+- Não cite nomes de clientes em nenhum idioma. Fale apenas de segmento e porte (por exemplo, "indústria de grande porte", "seguradora de grande porte", "escritórios de advocacia").
+- Não afirme que implantei ou coloquei no ar o projeto do estudo de caso. Minha participação foi da descoberta até o desenho completo da solução e a preparação para a construção. Mantenha essa formulação.
+- Não altere telefone, links de WhatsApp, link do LinkedIn, rodapé, menu, política de privacidade nem as outras páginas.
+- Mantenha as credenciais Microsoft e a seção "O processo vem antes da ferramenta" como fechamento, na mesma posição relativa (antes do CTA final).
+- Acessibilidade: hierarquia de títulos correta (um único h1; h2 por seção; h3 para cartões), contraste preservado, texto alternativo na foto.
+- Responsivo: a página precisa continuar boa em 375 px de largura, sem rolagem horizontal.
+- Sem travessão (—) no meio das frases do texto novo; use vírgulas e pontos.
+
+NOVA ESTRUTURA DA PÁGINA /sobre/ (PT)
+Ordem final: Abertura → Minha trajetória → O que faço na prática → Onde atuei → Um projeto por dentro → Do corporativo para o seu negócio → Credenciais Microsoft (existente) → Processo em 4 passos (existente) → CTA final (existente).
+Cada seção nova tem um rótulo pequeno acima do título (mesmo padrão de "Trajetória profissional" e "Um caminho com clareza" da página atual).
+
+--- 1. ABERTURA (substituir apenas o texto dos parágrafos; manter título, foto e botão do LinkedIn) ---
+Parágrafo 1: "Trabalho com CRM, atendimento ao cliente e transformação digital. Ajudei empresas de grande porte a sair de processos espalhados, como planilhas, e-mails e conversas de WhatsApp, e a chegar a uma operação organizada, com histórico centralizado e informação confiável para quem decide."
+Parágrafo 2: "Meu trabalho sempre começa ouvindo a operação. Só depois vem a ferramenta."
+
+--- 2. MINHA TRAJETÓRIA (substituir a seção "Trajetória profissional" atual, mantendo a lista de competências e a linha "Bacharel em Ciência e Tecnologia pela UNIFESP") ---
+Rótulo: "Trajetória profissional"
+Título: "Projetos em que a tecnologia era só metade do problema."
+Texto:
+"A outra metade era entender como o time realmente trabalhava: quem atendia, por onde o cliente chegava, onde a informação se perdia e o que a liderança precisava enxergar."
+"Passei por Indra (Minsait), Avanade (Accenture) e Bizapp, atuando como consultor funcional em projetos de CRM e atendimento sobre Dynamics 365 e Power Platform. Eu fazia a ponte entre quem opera o negócio e quem constrói a solução: levantava requisitos, mapeava processos, desenhava a solução, escrevia as especificações e organizava o backlog para que a construção acontecesse sem ruído."
+"Sou bacharel em Ciência e Tecnologia pela UNIFESP e, desde então, combino visão de negócio com prática de implementação."
+Linha do tempo (renderizar como lista simples ou timeline discreta, na ordem cronológica inversa; omitir qualquer linha sem dados):
+- [ANO–ANO] · Indra (Minsait) · [cargo]
+- [ANO–ANO] · Avanade (Accenture) · [cargo]
+- [ANO–ANO] · Bizapp · [cargo]
+Manter os logotipos/nomes das três empresas já existentes na página.
+
+--- 3. O QUE FAÇO NA PRÁTICA (nova seção, 5 cartões) ---
+Rótulo: "Na prática"
+Título: "O que eu entrego em um projeto."
+Cartões (título + descrição):
+1. "Descoberta e mapeamento" — "Converso com as áreas, mapeio o processo atual e identifico gargalos, retrabalho e controles paralelos que ninguém enxerga por dentro."
+2. "CRM e Customer Service" — "Desenho jornadas de atendimento, regras de roteamento, qualificação de demandas, SLA e histórico do cliente em Dynamics 365 Customer Service e omnichannel."
+3. "Automação e IA" — "Estruturo fluxos com Power Automate e agentes no Copilot Studio para triagem, cadastro, roteamento e acompanhamento, reduzindo tarefas manuais."
+4. "Especificação e backlog" — "Transformo o que o negócio precisa em documentação funcional que o time técnico consegue construir, priorizando recursos nativos da plataforma para a solução crescer sem virar um monstro."
+5. "Governança e visibilidade" — "Defino responsabilidades, regras de uso e indicadores, para que a liderança acompanhe atendimento, funil comercial e operação com dados confiáveis."
+
+--- 4. ONDE ATUEI (nova seção, curta) ---
+Rótulo: "Segmentos"
+Título: "Setores diferentes, o mesmo desafio."
+Texto: "Trabalhei com empresas de grande porte do setor industrial, com uma seguradora de grande porte e com escritórios de advocacia [de médio e grande porte]. O ponto em comum: muitos canais de contato, informação espalhada e a necessidade de rastrear quem fez o quê, com qual cliente e quando."
+Opcional visual: três chips ou cartões pequenos: "Indústria · grande porte", "Seguradora · grande porte", "Escritórios de advocacia · [porte]".
+
+--- 5. UM PROJETO POR DENTRO (nova seção; principal destaque da página) ---
+Rótulo: "Estudo de caso"
+Título: "CRM para uma indústria de grande porte."
+Três blocos com subtítulos (h3):
+"O ponto de partida" — "A empresa tinha vários canais de contato com clientes, mas pouca padronização. Parte dos atendimentos e das interações comerciais acontecia em canais dispersos, o que dificultava acompanhar demandas, rastrear ações e gerar indicadores. O histórico do relacionamento não ficava centralizado e o direcionamento correto dos atendimentos era um desafio."
+"O que eu fiz" — "Levantei requisitos, mapeei os processos atuais e desenhei a solução em Dynamics 365: jornadas de atendimento, regras de roteamento, processos de qualificação, integração entre canais digitais e critérios de governança. Escrevi a especificação funcional e a estrutura operacional da plataforma."
+"Até onde fui" — "Concluí a descoberta, o levantamento funcional, a documentação de requisitos, a arquitetura funcional e os fluxos operacionais. Deixei o projeto pronto para entrar na fase de construção e configuração, com a base definida para a operação omnichannel."
+Opcional visual: uma barra de progresso ou lista de etapas (Descoberta ✔, Requisitos ✔, Arquitetura funcional ✔, Fluxos operacionais ✔, Construção → próxima fase) mostrando até onde participei. Se implementar, a etapa "Construção" deve aparecer como próxima fase, nunca como concluída.
+
+--- 6. DO CORPORATIVO PARA O SEU NEGÓCIO (nova seção, antes das credenciais) ---
+Rótulo: "Da experiência à Chessa"
+Título: "A mesma lógica, na medida do seu negócio."
+Texto: "Uma clínica, uma imobiliária ou um escritório não precisa da estrutura de uma multinacional, mas costuma sofrer dos mesmos sintomas: informação espalhada, dependência de uma pessoa só, falta de visão do que está acontecendo. Na Chessa, uso o mesmo método (entender, desenhar, construir, colocar em prática) na medida do seu negócio. É esse olhar que está por trás de produtos como Lumina, Imobly e MultiEnvio."
+Link discreto ao final: "Ver projetos" apontando para /projetos/ (e as rotas equivalentes em EN e ES).
+
+--- 7. META TAGS ---
+Atualizar apenas nesta página (nas três línguas): title, meta description e og:description.
+PT description: "Felipe Chessa, consultor de CRM, Customer Service e transformação digital, com experiência na Indra (Minsait), Avanade e Bizapp. Conheça minha trajetória."
+EN e ES: traduzir mantendo o sentido e o limite de ~160 caracteres.
+
+VERSÕES EM INGLÊS E ESPANHOL
+Traduza todo o conteúdo novo para EN (/en/about/) e ES (/es/sobre-mi/) com naturalidade, não literalmente, mantendo o tom em primeira pessoa e os mesmos nomes de produtos (Dynamics 365, Power Platform, Copilot Studio, Power Automate). Use os padrões de tradução já existentes no projeto para termos recorrentes (por exemplo, "Customer Success", "omnichannel"). Mantenha as chaves/estrutura de i18n consistentes entre os três idiomas.
+
+CRITÉRIOS DE ACEITE
+- As três versões da página exibem as seções na ordem definida, sem texto em português nas versões EN/ES.
+- Nenhum nome de cliente aparece no código, no conteúdo nem nos comentários.
+- Nenhuma seção com campo [entre colchetes] vazio aparece com o colchete na tela.
+- O projeto compila sem erros nem warnings novos; o site continua responsivo e sem rolagem horizontal em 375 px.
+- Outras páginas, menu, rodapé e links de contato ficam idênticos ao que estavam.
+- O seletor de idioma (PT/EN/ES) continua levando à versão equivalente desta página.
+
+ENTREGA
+1. Rode o build/lint do projeto e corrija o que quebrar.
+2. Não faça deploy nem push até eu aprovar, a menos que o fluxo do projeto publique automaticamente ao salvar; nesse caso, avise-me antes.
+3. Ao final, envie um resumo curto: arquivos alterados, o que foi adicionado em cada seção, qualquer decisão de design que tomou por conta própria e qualquer trecho em que teve dúvida ou omitiu conteúdo por falta de dados.
