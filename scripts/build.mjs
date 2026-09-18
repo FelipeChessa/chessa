@@ -20,6 +20,7 @@ await cp(join(project,'node_modules','lucide-static','LICENSE'),join(out,'assets
 await sharp(join(project,'assets','hero-tech.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','hero-tech.webp'));
 await sharp(join(project,'assets','felipe-chessa.jpeg')).webp({quality:86}).toFile(join(out,'assets','felipe-chessa.webp'));
 await cp(join(project,'assets','projects'),join(out,'assets','projects'),{recursive:true});
+await cp(join(project,'assets','logos'),join(out,'assets','logos'),{recursive:true});
 let count = 0;
 for (const lang of locales) {
   const dir = join(out,lang === 'pt' ? '' : lang);
