@@ -17,10 +17,12 @@ for (const font of ['manrope','dm-sans']) {
   await cp(join(project, 'node_modules', '@fontsource-variable', font, 'LICENSE'), join(out,'assets','licenses',`${font}.txt`));
 }
 await cp(join(project,'node_modules','lucide-static','LICENSE'),join(out,'assets','licenses','lucide.txt'));
-await sharp(join(project,'assets','hero-tech.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','hero-tech.webp'));
 await sharp(join(project,'assets','felipe-chessa.jpeg')).webp({quality:86}).toFile(join(out,'assets','felipe-chessa.webp'));
 await cp(join(project,'assets','projects'),join(out,'assets','projects'),{recursive:true});
 await cp(join(project,'assets','logos'),join(out,'assets','logos'),{recursive:true});
+await sharp(join(project,'assets','capa-pt.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','capa-pt.webp'));
+await sharp(join(project,'assets','capa-en.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','capa-en.webp'));
+await sharp(join(project,'assets','capa-es.png')).resize({width:1672,withoutEnlargement:true}).webp({quality:85}).toFile(join(out,'assets','capa-es.webp'));
 let count = 0;
 for (const lang of locales) {
   const dir = join(out,lang === 'pt' ? '' : lang);
