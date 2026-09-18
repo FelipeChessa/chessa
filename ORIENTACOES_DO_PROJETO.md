@@ -2,9 +2,9 @@
 
 ## Estado do projeto
 
-Este repositório contém o início da estrutura do site. As cinco páginas HTML e o favicon foram criados, mas o CSS e o JavaScript ainda precisam ser implementados. **Não considerar o site pronto ou publicável nesta etapa.** O próximo agente deve continuar a construção neste mesmo diretório, sem reiniciar o briefing.
+O site foi implementado como um projeto estático com geração em Node.js. Há cinco páginas completas em três idiomas (15 documentos HTML), fontes locais, imagens otimizadas, navegação móvel, filtros de projetos, ampliação de imagens e contato por WhatsApp/telefone. A versão gerada fica em `dist/`; as fontes estão em `src/` e `assets/`. Consulte `README.md` para gerar e verificar. A publicação pública ainda depende da revisão do usuário.
 
-O usuário pediu um projeto versionado em Git e escolheu o GPT-6 Astra para continuar a implementação. O modelo pode ser trocado assim que este documento estiver salvo. A tarefa original permanece: construir e verificar o site completo.
+O usuário pediu um projeto versionado em Git. O protótipo aprovado e o conteúdo da entrevista foram preservados. As capturas dos produtos próprios são reais; o Lumina usa os dados fictícios autorizados, com o endereço da conta substituído na captura.
 
 ## Objetivo
 
@@ -75,8 +75,7 @@ Todos são produtos/sistemas próprios apresentados pelo usuário. Ele disse que
 
 ## Próximos passos
 
-1. Implementar `assets/styles.css` e `assets/app.js` e preencher todas as páginas.
-2. Preparar visual dos projetos usando somente material permitido e identificando demonstrações fictícias.
-3. Testar desktop/mobile, navegação e três idiomas; corrigir problemas.
-4. Finalizar README e fazer um commit quando o site estiver funcional.
-5. Entregar ao usuário um link de preview local e um resumo do que foi implementado.
+1. Revisar a versão gerada em `dist/index.html` com o usuário.
+2. Aplicar eventuais ajustes de conteúdo ou visual e executar `npm run build` e `npm test`.
+3. Definir hospedagem e domínio quando o usuário aprovar a publicação.
+4. Ao conhecer o domínio real, acrescentar sitemap, URLs canônicas e imagem de compartilhamento com URL absoluta.

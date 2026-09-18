@@ -1,0 +1,25 @@
+{
+  "name": "chessa-negocios-tecnologia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio multilíngue de Felipe Chessa: negócios, processos e tecnologia.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test tests/site.test.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "lucide-static": "^0.577.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "cheerio": "^1.2.0",
+    "sharp": "^0.35.4"
+  }
+}

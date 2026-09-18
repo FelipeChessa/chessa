@@ -4,3 +4,11 @@ node_modules/
 dist/
 .env*
 !.env.example
+artifacts/
+.preview/
+playwright-report/
+test-results/
+.npm-cache/
+/Lumina - Sistema de Gestão Médica Premium.html
+/Lumina - Sistema de Gestão Médica Premium_files/
+/perfil.jpeg
